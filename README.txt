@@ -13,8 +13,6 @@ Known issues:
 
 - It doesn't include words like "mum", "fellow", "mister", &c, that are often used in entirely non-gendered ways (e.g. "mum's the word", "my fellow americans", "perfume mister"). I haven't thought up a good way around that [yet].
 
-- Some folks say it doesn't work on reddit, others say that it does. It works on reddit for me. More testing and possibly tweaking here.
-
 - Apparently there was already a fork called [Jailbreak the Binary](https://chrome.google.com/webstore/detail/mmdlclbfhplmbjfefngjbicmelpbbdnh) but it doesn't seem to exist any more.
 
 - It's my personal preference that not all gendered words are replaced. e.g. "mansplain"
