@@ -22,8 +22,7 @@ Known issues:
 ***
 
 If you'd just like to use the extension, you can install it automatically:
-_TODO: replace link when upload to store_
-https://chrome.google.com/webstore/detail/fiidcfoaaciclafodoficaofidfencgd
+https://chrome.google.com/webstore/detail/jailbreak-the-binary/bhflldkbcnidkhofjejdmidnpklichjk
 
 ***
 
