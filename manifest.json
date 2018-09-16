@@ -1,7 +1,7 @@
 {
   "name": "Jailbreak the Binary",
   "version": "1.0.4",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "description": "Removes gender from your view of the web.",
   "background": {
     "page": "background.html"
