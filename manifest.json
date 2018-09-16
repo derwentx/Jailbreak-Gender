@@ -1,8 +1,8 @@
 {
-  "name": "Jailbreak the Patriarchy",
-  "version": "1.0.3",
-  "manifest_version": 2,
-  "description": "Genderswaps your view of the web.",
+  "name": "Jailbreak the Binary",
+  "version": "1.0.4",
+  "manifest_version": 3,
+  "description": "Removes gender from your view of the web.",
   "background": {
     "page": "background.html"
   },
@@ -14,7 +14,7 @@
   ],
   "browser_action": {
     "default_icon": "icon19.png",
-    "default_title": "Toggle Patriarchy"
+    "default_title": "Toggle Gender"
   },
   "content_scripts": [
     {

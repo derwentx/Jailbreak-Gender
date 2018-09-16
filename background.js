@@ -38,7 +38,7 @@ function now() {
 var alreadyQueued = false;
 function checkForRandomSwap() {
   var options = JSON.parse(localStorage.getItem('options'));
-  if (!options.checkDaily) return;
+  if (options === null || !options.hasOwnProperty('checkDaily') || !options.checkDaily) return;
 
   var lastChangedAt = parseInt(localStorage.getItem("lastChangedAt"), 10);
   //if we've never changed it, or if it's been over a day since it was changed
