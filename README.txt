@@ -10,12 +10,11 @@ if you would rather binary genders be swapped. All credit goes to [DanielleSuche
 Known issues:
 
 - Since "her" can be a possessive or objective pronoun, sometimes “her” should translate to “them”, and sometimes it should translate to “their”. Rather than run every node update through some sort of natural language parser, I set up regular expressions with a set of rules that recognize the most common cases where “her” always or usually should translate to “them”, and then one that translates all remaining instances of “her” to “their” instead. What this ultimately means is that sometimes you’re going to see “their” where you really ought to see “them” instead, or vice-versa. Please submit issues when you find examples that break this
-
 - It doesn't include words like "mum", "fellow", "mister", &c, that are often used in entirely non-gendered ways (e.g. "mum's the word", "my fellow americans", "perfume mister"). I haven't thought up a good way around that [yet].
-
 - Apparently there was already a fork called [Jailbreak the Binary](https://chrome.google.com/webstore/detail/mmdlclbfhplmbjfefngjbicmelpbbdnh) but it doesn't seem to exist any more.
-
 - It's my personal preference that not all gendered words are replaced. e.g. "mansplain"
+- Not all gendered words have standard non-gendered equivalents, but I've used words suggested [here](https://nonbinary.wiki/wiki/Gender_neutral_language) to fill in the gaps, e.g. mom / dad -> par (short for parent)
+- I'm aware the a lot of the translations are a bit silly like replacing all instances of the word male with agender. This is for fun.
 
 ***
 

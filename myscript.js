@@ -1,160 +1,202 @@
 // todo replace these with correct substitutions, e.g. monarch
 
-var complete = {
-  // actor: 'actress',
-  // actors: 'actresses',
-  // actress: 'actor',
-  // archduchess: 'archduke',
-  // archduchesses: 'archdukes',
-  // archduke: 'archduchess',
-  // aunt: 'parent\'s sibling',
-  // aunts: 'parent\'s siblings',
-  // baron: 'baroness',
-  // baroness: 'baron',
-  // baronesses: 'barons',
-  // baronet: 'baronetess',
-  // baronets: 'baronetesses',
-  // barons: 'baronesses',
+// Words that can possibly used as adverbs
+var complete_adverbs = {
+
+};
+
+// Words that can possibly be used as adjectives
+var complete_adjectives = {
+    // dudelier: 'womanlier',
+    // dudeliest: 'womanliest',
+    boyish: 'youthful',
+    dudely: 'pal-like',
+    fem: 'androg',
+    // girlier: 'agenderier',
+    // girliest: 'agenderiest',
+    girlish: 'youthful',
+    girly: 'childish',
+    godly: 'divine',
+    male: 'genderless',
+    // manly: 'womanly',
+    // maternal: 'paternal',
+    // paternal: 'maternal',
+};
+
+// Words used to describe family / personal relationships
+var complete_relationships = {
+    aunt: 'ommer',
+    aunts: 'ommers',
+    aunty: 'ommer',
+    bro: 'sib',
+    bros: 'sibs',
+    bruh: 'sihb',
+    dad: 'parent',
+    dads: 'parents',
+    'fiancee?': 'betrothed',
+    gramps: 'granpar',
+    grandma: 'grandpar',
+    grandmas: 'grandpars',
+    hubby: 'spouse',
+    husband: 'spouse',
+    husbands: 'spouses',
+    mom: 'par',
+    momma: 'para',
+    moms: 'pars',
+    nephew: 'nieph',
+    nephews: 'niephs',
+    niece: 'nieph',
+    nieces: 'niephs',
+    papa: 'para',
+    poppa: 'para',
+    son: 'child',
+    sons: 'childs',
+    uncle: 'ommer',
+    uncles: 'ommer',
+    // widow: 'widower',
+    wives: 'spouses'
+
+};
+
+// Words for job titles
+var complete_professions = {
+    // actor: 'actress',
+    // actors: 'actresses',
+    // actress: 'actor',
+    // archduchess: 'archduke',
+    // archduchesses: 'archdukes',
+    // archduke: 'archduchess',
+    barman: 'bartender',
+    barmaid: 'bartender',
+    // baron: 'baroness',
+    // baroness: 'baron',
+    // baronesses: 'barons',
+    // baronet: 'baronetess',
+    // baronets: 'baronetesses',
+    // barons: 'baronesses',
+    // comtesse: 'comte',
+    // countess: 'count',
+    // countesses: 'counts',
+    // deaconess: 'deacon',
+    // deaconesses: 'deacons',
+    // deacons: 'deaconesses',
+    // duchess: 'duke',
+    // duchesses: 'dukes',
+    // duke: 'duchess',
+    // dukes: 'duchesses',
+    // earl: 'countess',
+    // earls: 'countesses',
+    // emperor: 'empress',
+    // emperors: 'empresses',
+    // empress: 'emperor',
+    // empresses: 'emperors',
+    god: 'deity',
+    goddess: 'deity',
+    king: 'monarch',
+    kings: 'monarchs',
+    // marquis: 'marquise',
+    // marquise: 'marquise',
+    priest: 'minister',
+    priestess: 'minister',
+    priestesses: 'minister',
+    priests: 'minister',
+    prince: 'primarch',
+    princes: 'primarchs',
+    princess: 'primarch',
+    princesses: 'primarchs',
+    queen: 'monarch',
+    queens: 'monarchs',
+    // viscount: 'viscountess',
+    // viscountess: 'viscount',
+    // viscountesses: 'viscounts',
+    // viscounts: 'viscountesses',
+};
+
+// Words that can be nouns that don't fit into the above caregories
+var complete_nouns = {
+};
+
+// Words that are pronouns
+var complete_pronouns = {
+    he: 'they',
+    she: 'they',
+};
+
+var complete_honorifics = {
+    mr: 'mx',
+    mrs: 'mx',
+    ms: 'mx',
+    mister: 'mix',
+    sir: 'liege',
+    'ma\'am': 'liege',
+}
+
+var complete_other = {
   boy: 'child',
   boyhood: 'childhood',
-  boyish: 'childish',
   boys: 'chlidren',
-  'boys\s(and|&)\sgirls': children,
-  bro: 'sib',
-  bros: 'sibs',
-  // comte: 'comtesse',
-  // countess: 'count',
-  // countesses: 'counts',
-  dad: 'parent',
-  dads: 'parents',
-  // deaconess: 'deacon',
-  // deaconesses: 'deacons',
-  // deacons: 'deaconesses',
-  // duchess: 'duke',
-  // duchesses: 'dukes',
   dude: 'pal',
-  // dudelier: 'womanlier',
-  // dudeliest: 'womanliest',
-  dudely: 'pal-like',
   dudes: 'pals',
-  // duke: 'duchess',
-  // dukes: 'duchesses',
-  // earl: 'countess',
-  // earls: 'countesses',
-  // emperor: 'empress',
-  // emperors: 'empresses',
-  // empress: 'emperor',
-  // empresses: 'emperors',
-  // fem: 'masc',
-  // fiance: 'fiancee',
-  // fiancee: 'fiance',
   // gal: 'fellow',
   gentleman: 'gentleperson',
   gentlemen: 'gentlepeople',
   girl: 'child',
-  // girlier: 'dudelier',
-  // girliest: 'dudeliest',
   girls: 'children',
-  girly: 'childish',
-  // god: 'goddess',
-  // goddess: 'god',
   // godhead: 'goddesshead',
   // godhood: 'goddesshood',
-  // godliness: 'goddessliness',
-  // godly: 'goddessly',
-  // gramps: 'grandma',
-  // grandma: 'grandpa',
-  // grandmas: 'grandpas',
-  // guy: 'gal',
-  // guys: 'gals',
-  he: 'they',
-  // hero: 'heroine',
+  godliness: 'divinity',
+  guy: 'person',
+  guys: 'folk',
   herself: 'themself',
   himself: 'themself',
-  husband: 'spouse',
-  husbands: 'spouses',
-  // king: 'queen',
-  // kings: 'queens',
   ladies: 'gentlepeople',
-  'ladies and gentlemen': 'gentlepeople',
-  // lord: 'lady',
-  // lords: 'ladies',
-  maiden: 'stablehand',
-  // male: 'female',
-  // males: 'females',
-  // mama: 'papa',
+  lords: 'leiges',
+  males: 'agenders',
+  mama: 'para',
   man: 'person',
   manhood: 'adulthood',
   mankind: 'humanity',
   // manliness: 'womanliness',
-  // manly: 'womanly',
-  // marquis: 'marquise',
-  // marquise: 'marquise',
-  // maternal: 'paternal',
   // maternity: 'paternity',
   men: 'people',
   menz: 'peoplez',
   // mgtow: 'wgtow',
-  mom: 'par',
-  momma: 'para',
-  moms: 'pars',
-  mr: 'mx',
-  mrs: 'mx',
-  ms: 'mx',
-  // nephew: 'niece',
-  // nephews: 'nieces',
-  // niece: 'nephew',
-  // nieces: 'nephews',
-  papa: 'para',
-  // paternal: 'maternal',
   // paternity: 'maternity',
-  poppa: 'para',
-  // priest: 'priestess',
-  // priestess: 'priest',
-  // priestesses: 'priests',
-  // priests: 'priestesses',
-  // prince: 'princess',
-  // princes: 'princesses',
-  // princess: 'prince',
-  // princesses: 'princes',
-  queen: 'monarch',
-  queens: 'monarchs',
   // radfem: 'radmasc',
-  she: 'they',
-  // sir: 'ma\'am',
-  son: 'child',
-  sons: 'childs',
-  // uncle: 'aunt',
-  // uncles: 'aunts',
-  // viscount: 'viscountess',
-  // viscountess: 'viscount',
-  // viscountesses: 'viscounts',
-  // viscounts: 'viscountesses',
-  // widow: 'widower',
   // widower: 'widow',
-  wives: 'spouses'
 };
 
-var start =  {
+var complete = Object.assign(
+    {},
+    complete_adverbs,
+    complete_adjectives,
+    complete_relationships,
+    complete_professions,
+    complete_nouns,
+    complete_pronouns,
+    complete_honorifics,
+    complete_other
+);
+
+// letters that can be replaced at the beginning of a word
+var prefixes =  {
   'he\'': 'they\'',
-  // 'ma\'am': 'sir',
   'she\'': 'they\'',
   // actresses: 'actors',
   // bloke: 'gal',
   boyfriend: 'partner',
   // bride: 'groom',
   brother: 'sibling',
-  // comtesse: 'comte',
-  // dame: 'knight',
-  // damsel: 'squire',
-  // female: 'male',
+  // comte: 'comtesse',
+  dame: 'noble',
+  female: 'agender',
   girlfriend: 'partner',
   girlhood: 'childhood',
   // grandpa: 'grandma',
   grandson: 'grandchild',
   // groom: 'bride',
-  // knight: 'dame',
-  lady: 'gentleperson',
+  knight: 'noble',
+  'l(ady|ord)': 'leige',
   // maleness: 'femaleness',
   // marchioness: 'marquess',
   // margrave: 'margravine',
@@ -167,12 +209,12 @@ var start =  {
   // patroniz: 'matroniz',
   sister: 'sibling',
   // squire: 'damsel',
-  // waiter: 'waitress',
-  // waitress: 'waiter',
+  'wait(er|ess)': 'server',
   wife: 'spouse'
 };
 
-var anywhere = {
+// letters that can be replaced if they appear in any part of a word (including prefix or suffix)
+var infixes = {
   airman: 'airperson',
   airmen: 'airpeople',
   alderman: 'alderperson',
@@ -212,8 +254,8 @@ var anywhere = {
   doorman: 'doorperson',
   doormen: 'doorpeople',
   // dudebro: 'galpal',
-  // father: 'mother',
-  // femin: 'mascul',
+  father: 'parent',
+  femin: 'androg',
   fireman: 'fireperson',
   firemen: 'firepeople',
   fisherman: 'fisherperson',
@@ -224,15 +266,15 @@ var anywhere = {
   freshmen: 'freshpeople',
   garbageman: 'garbageperson',
   garbagemen: 'garbagepeople',
-  // godmother: 'godfather',
-  // grandmother: 'grandfather',
+  godmother: 'godparent',
+  grandmother: 'grandparent',
   handyman: 'handyperson',
   handymen: 'handypeople',
   hangman: 'hangperson',
   hangmen: 'hangpeople',
   henchman: 'henchperson',
   henchmen: 'henchpeople',
-  // heroes: 'heroines',
+  heroes: 'heroix',
   journeyman: 'journeyperson',
   journeymen: 'journeypeople',
   kinsman: 'kinsperson',
@@ -244,20 +286,21 @@ var anywhere = {
   laymen: 'laypeople',
   madman: 'madperson',
   madmen: 'madpeople',
+  maiden: 'stablehand',
   mailman: 'mailperson',
   mailmen: 'mailpeople',
   // mansplain: 'ladysplain',
   marksman: 'marksperson',
   marksmen: 'markspeople',
-  // mascul: 'femin',
+  // mascul: 'androg',
   middleman: 'middleperson',
   middlemen: 'middlepeople',
   milkman: 'milkperson',
   milkmen: 'milkpeople',
   // misandr: 'misogyn',
   // misogyn: 'misandr',
-  // mommies: 'daddies',
-  // mommy: 'daddy',
+  mommies: 'paras',
+  mommy: 'para',
   nobleman: 'nobleperson',
   noblemen: 'noblepeople',
   ombudsman: 'ombudsperson',
@@ -303,28 +346,60 @@ var anywhere = {
   workmen: 'workpeople'
 };
 
-var end = { heroine: 'hero', heroines: 'heroes' };
-
-var map = {};
-var maps = [ start, end, complete, anywhere ];
-for (var i = 0; i < maps.length; i++) {
-  for (attr in maps[i]) {
-    map[attr] = maps[i][attr];
-  }
-}
-
-
-var concatString = function(obj) {
-  var parts = [];
-  for (key in obj) {
-    parts.push(key);
-  }
-  return parts.join('|');
+// letters that can be replaced at the end of a word
+var suffixes = {
+    hero: 'heroix',
+    heroine: 'heroix',
+    heroines: 'heroixes'
 };
 
-var regex = '^(' + concatString(start) + ')|(' + concatString(end) + ')$|(' + concatString(anywhere) + ')|^(' + concatString(complete) + ')$';
 
-var searchFor = new RegExp(regex, 'i');
+var phrases = {
+    'boys (and|&|\\+) girls': 'children',
+    'girls (and|&|\\+) boys': 'children',
+    'ladies (and|&|\\+) gentlemen': 'gentlefolk',
+    'gentlemen (and|&|\\+) ladies': 'gentlefolk',
+    's?he has': 'they have',
+    's?he hasn\'t': 'they haven\'t',
+    's?he has to': 'they have to',
+    's?he is': 'they are',
+    's?he\'s': 'they\'ve',
+    's?he isn\'t': 'they aren\'t',
+    'both genders': 'all genders',
+    'both sexes': 'all sexes'
+}
+
+var all_subs = Object.assign(
+    {},
+    prefixes,
+    suffixes,
+    complete,
+    infixes,
+    phrases
+);
+
+function joinRegex(obj) {
+  // Join the properties of an object with pipes
+  return '(' + Object.keys(obj).join('|') + ')';
+};
+
+function isEmpty(obj) {
+  return Object.keys(obj).length == 0;
+}
+
+var word_regex_components = [];
+if(!isEmpty(prefixes))
+    word_regex_components.push('^' + joinRegex(prefixes));
+if(!isEmpty(suffixes))
+    word_regex_components.push(joinRegex(suffixes) + '$');
+if(!isEmpty(infixes))
+    word_regex_components.push(joinRegex(infixes));
+if(!isEmpty(complete))
+    word_regex_components.push('^' + joinRegex(complete) + '$');
+
+var word_regex = new RegExp(word_regex_components.join('|'), 'i');
+
+var phrase_regex = new RegExp('\\b' + joinRegex(phrases) + '\\b', 'gi');
 
 function capitalize(word) {
   var first = word.charAt(0);
@@ -345,17 +420,29 @@ function matchCase(old_word, replacement) {
   return capitalize(replacement);
 }
 
-function findMatch(word) {
-  return map[word];
+function findMatch(string) {
+    for (var regex in all_subs) {
+        if (string.match(new RegExp('^' + regex + '$', 'i')) !== null) {
+            return all_subs[regex]
+        }
+    }
 }
 
 function swapWord(word) {
-  return matchCase(word, word.toLowerCase().replace(searchFor, findMatch));
+  return matchCase(word, word.toLowerCase().replace(word_regex, findMatch));
+}
+
+function swapPhrase(phrase) {
+  return matchCase(phrase, phrase.toLowerCase().replace(phrase_regex, findMatch));
 }
 
 function genderswap(text) {
   return text
+    /* phrases */
+    .replace(phrase_regex, swapPhrase)
+    /* words including apostrophes */
     .replace(/\b([a-z][\w']+)\b/gi, swapWord)
+    /* him / her */
     .replace(/\b(hers?|hi[ms])\b[\.\,\;\:\]\}\)\?]?(\s+\S+)?/gim, function(match) {
       if (/hers?/i.test(match)) {
         return translateHer(match);
@@ -363,7 +450,8 @@ function genderswap(text) {
         return translateHim(match);
       }
     })
-    .replace(/\b([a-z]+[,;:'".]*)\s+Miss(?= [A-Z][a-z])/g, "$1 Mr.");
+    /* special honorific case */
+    .replace(/\b([a-z]+[,;:'".]*)\s+Miss(?= [A-Z][a-z])/g, "$1 Mx.");
 }
 
 function translateHim(text) {
@@ -389,7 +477,7 @@ function translateHer(text) {
   return text
     .replace(/\bher\b(?=[\.\,\;\:\]\}\)\?])/g, 'them')
     .replace(/\bher\sher\b/g, "them their")
-    .replace(combineRegex(/\bher\b/g, possessiveHintRegex1), "them")
+    .replace(combineRegex(/\bher\b/g, possessiveHintRegex1), "their")
     .replace(combineRegex(/\bher\b/g, possessiveHintRegex2), "them")
     .replace(/\bit\sher\sall\b/g,"it their all")
     .replace(/\bher\sall\b/g,"them all")
@@ -397,7 +485,7 @@ function translateHer(text) {
     .replace(/\bhers\b/g,"theirs")
     .replace(/\bHer\b(?=[\.\,\;\:\]\}\)\?])/g,"Them")
     .replace(/\bHer\sher\b/g,"Them their")
-    .replace(combineRegex(/\bHer\b/g, possessiveHintRegex1), "Them")
+    .replace(combineRegex(/\bHer\b/g, possessiveHintRegex1), "Their")
     .replace(combineRegex(/\bHer\b/g, possessiveHintRegex2), "Them")
     .replace(/\bit\sHer\sall\b/g,"it Their all")
     .replace(/\bHer\sall\b/g,"Them all")
