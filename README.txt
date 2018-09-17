@@ -28,3 +28,4 @@ https://chrome.google.com/webstore/detail/jailbreak-the-binary/bhflldkbcnidkhofj
  - The original plugin
  - this list of substitutions http://web.mit.edu/comdor/editguide/style-matters/gender_neutral.html
  - this article https://nonbinary.wiki/wiki/Gender_neutral_language
+ - the logo is from here: https://www.deviantart.com/pride-flags/art/Agender-Symbol-617960504
