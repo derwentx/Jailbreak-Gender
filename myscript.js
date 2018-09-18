@@ -363,8 +363,11 @@ var phrases = {
     's?he hasn\'t': 'they haven\'t',
     's?he has to': 'they have to',
     's?he is': 'they are',
+    // TODO: what about "she's the worst? " / "she's got the best drumkit"
     's?he\'s': 'they\'ve',
     's?he isn\'t': 'they aren\'t',
+    'is s?he': 'are they',
+    'isn\'t s?he': 'aren\'t they'
     'both genders': 'all genders',
     'both sexes': 'all sexes'
 }
